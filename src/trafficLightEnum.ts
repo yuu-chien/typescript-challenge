@@ -7,9 +7,14 @@
  * 輸入: TrafficLight.Red
  * 輸出: 'The traffic light is Red'
  */
-export enum TrafficLight {
 
+export enum TrafficLight {
+  Red = 'Red',
+  Yellow = 'Yellow',
+  Green = 'Green'
 }
-export function getTrafficLightStatus(light) {
+
+export function getTrafficLightStatus(light: TrafficLight) {
   // 在此實現函式
+  return `The traffic light is ${TrafficLight[light]}`
 }

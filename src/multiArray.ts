@@ -8,10 +8,13 @@
  * 輸出: [[2, 4], [6, 8], [10, 12]]
  */
 
-export function processMultiArray(arr: number[][]): number[][] {
+export function processMultiArray(arr: [number, number][]): [number, number][] {
     // 在此實現函式
-    const res = arr.map((item) => {
-        return Array.from(item, (x) => x * 2)
+    return arr.map((item) => {
+        return Array.from(item, (x) => x * 2) as [number, number]
     })
-    return res
 }
+
+// Notes
+// number[][]：表示一個包含數字陣列的陣列。每個元素都是一個數字陣列，但這些內部陣列的長度不需要相同。
+// [number, number][]：表示一個包含數字對的陣列。每個元素都是一個包含兩個數字的元組。這種表示法明確指定了內部陣列的長度為 2。

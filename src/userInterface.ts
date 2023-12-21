@@ -11,6 +11,13 @@
  * 輸入: { firstName: 'John', lastName: 'Doe' }
  * 輸出: 'John Doe'
  */
-export function getFullName(user: /* 你的用戶介面 */): string {
+
+interface UserInfo {
+    firstName: string;
+    lastName: string;
+}
+
+export function getFullName(user: UserInfo): string {
     // 在此實現函式
+    return `${user.firstName} ${user.lastName}`
 }

@@ -5,11 +5,11 @@
  * @returns - 回傳一個 Promise，該 Promise resolve 的值應該是陣列中所有數字的總和
  */
 
-
 export function asyncSum(numbers: number[]): Promise<number> {
     return new Promise((resolve, reject) => {
         try {
-            // 請在此處寫下你的程式碼
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            resolve(sum);
         } catch (error) {
             reject(error);
         }

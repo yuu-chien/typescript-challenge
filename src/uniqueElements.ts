@@ -6,4 +6,12 @@
  */
 export function uniqueElements(array: number[]): number[] {
     // 請在此處寫下你的程式碼
+    const sortArr = array.sort()
+    const resArr: number[] = []
+    sortArr.map((item, idx) => {
+        if (item !== sortArr[idx - 1]) {
+            resArr.push(item)
+        }
+    })
+    return resArr
 }
